@@ -70,7 +70,7 @@ class CurrentPositionNotifier extends StateNotifier<Position?> {
 
   CurrentPositionNotifier(this._locationService) : super(null);
 
-  Future<Position?>> getCurrentPosition() async {
+  Future<Position?> getCurrentPosition() async {
     final position = await _locationService.getCurrentPosition();
     state = position;
     return position;
